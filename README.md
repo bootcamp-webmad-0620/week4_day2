@@ -65,3 +65,10 @@
   * Incluir los parciales (sin guiones medios en el nombre) en el directorio registrado (`views/partials`)
 - Un partial puede ser incluido en un hbs mediante al sintaxis `{{> partialName}}`
 - Puede recibir datos tras el nombre: `{{> partialName this}}`
+
+
+## Apuntes finales
+
+- El comando `nodemon -e js,hbs,css app.js` levanta Nodemon con alcance de parciales.
+- La propiedad `scripts` del `package.json` permite crear *shorthands* para comandos extensos.
+
