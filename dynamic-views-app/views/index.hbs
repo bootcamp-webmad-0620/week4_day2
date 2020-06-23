@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My first view</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <h1>¡Bienvenid@, {{name}} {{surname}}!</h1>
+    <p>Nos encanta recibirte en el Bootcamp {{{bootcamp}}} ({{city}})</p>
+
+    <h3>Tu información personal</h3>
+    {{#with personalInfo}}
+    <p>Edad: {{age}}</p>
+    <p>Celiaco: {{celiac}}</p>
+    <p>Hij@s: {{children}}</p>
+    {{/with}}
+
+    <h3>Skills que aprenderás</h3>
+    <ul>
+        {{#each skills}}
+        <li>{{this}}</li>
+        {{else}}
+        <li>Aún no disponemos de registros, pero algo aprenderás.</li>
+        {{/each}}
+    </ul>
+
+
+    <h3>Avisos</h3>
+    <ul>
+        {{#if payed}}
+        <li>El pago correspondiente ({{amount}}€) ya ha sido realizado</li>
+        {{else}}
+        <li>Por favor, procede a realizar el pago correspondiente ({{amount}}€)</li>
+        {{/if}}
+
+        {{#unless address}}
+        <li>No disponemos de tu dirección! Mándanosla, merluzo.</li>
+        {{/unless}}
+    </ul>
+
+</body>
+
+</html>

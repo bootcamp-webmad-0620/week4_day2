@@ -1,0 +1,16 @@
+nav {
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.players-page .card {
+    margin-bottom: 40px;
+}
+
+.players-page .card img {
+    height: 150px;
+    object-fit: cover;
+}
